@@ -28,3 +28,43 @@ def animacao_festa(rodadas: int = 5) -> None:
         return
     console.print("[bold green]✨🎉 FESTA! 🎉✨[/]")
     animacao_festa(rodadas - 1)
+# ================================
+# VISUAIS CYBERPUNK EXTRAS
+# ================================
+
+def imprime_titulo() -> None:
+    Console.clear()
+    Console.print("\n")
+    Console.print("[bold magenta]"
+                  "██╗     ██╗ █████╗ ██████╗ ██╗██████╗ ██╗   ██╗\n"
+                  "██║     ██║██╔══██╗██╔══██╗██║██╔══██╗╚██╗ ██╔╝\n"
+                  "██║     ██║███████║██████╔╝██║██████╔╝ ╚████╔╝ \n"
+                  "██║     ██║██╔══██║██╔══██╗██║██╔══██╗  ╚██╔╝  \n"
+                  "███████╗██║██║  ██║██║  ██║██║██║  ██║   ██║   \n"
+                  "╚══════╝╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝╚═╝  ╚═╝   ╚═╝   "
+                  "[/bold magenta]")
+    Console.print("\n[cyan]━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[/]\n")
+    Console.print("[bold cyan]Bem-vinda à Aventura Cyberpunk no Labirinto![/]\n")
+    Console.print("[cyan]Use as setas ou WASD para jogar.[/]\n")
+    Console.print("[cyan]Colete itens, marque pontos e fuja antes que acabem suas jogadas![/]\n")
+    Console.print("[magenta]━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[/]\n")
+    Console.print("\n")
+
+
+def status_jogador(jogador, jogadas_restantes: int) -> None:
+    Console.print("[bold blue]╔════════════ STATUS DO JOGADOR ════════════╗[/]")
+    Console.print(f"[bold blue]║  Pontos:            [/][yellow]{jogador.pontos:<10}[/][bold blue]        ║[/]")
+    Console.print(f"[bold blue]║  Itens coletados:   [/][yellow]{jogador.itens_coletados:<10}[/][bold blue]  ║[/]")
+    Console.print(f"[bold blue]║  Jogadas restantes: [/][yellow]{jogadas_restantes:<10}[/][bold blue]     ║[/]")
+    Console.print("[bold blue]╚════════════════════════════════════════════╝[/]\n")
+
+
+def game_over_visual() -> None:
+    Console.clear()
+    Console.print("\n")
+    Console.print("[bold red]💀 GAME OVER 💀[/]")
+    Console.print("[magenta]Você ficou sem jogadas![/]\n")
+    Console.print("[red]███████████████████████████████████████████[/]")
+    Console.print("[magenta]Obrigado por jogar a versão cyberpunk![/]")
+    Console.print("[red]███████████████████████████████████████████[/]\n")
+    Console.print("\n")
