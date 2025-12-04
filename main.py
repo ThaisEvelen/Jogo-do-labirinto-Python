@@ -153,7 +153,7 @@ def jogar(args):
         # checar vitória
         if lab[jogador.y][jogador.x] == "S":
             imprimir_labirinto(lab, jogador)
-            console.print("[bold green]🎉 Você encontrou a saída![/]")
+            console.print("[bold green]🎉 Você encontrou a saída!🏁[/]")
             status_jogador(jogador, jogadas_restantes)
             animacao_festa(4)
             break

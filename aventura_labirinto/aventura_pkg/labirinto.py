@@ -63,18 +63,31 @@ def imprimir_labirinto(lab: List[List[str]], jogador = None) -> None:
     for y, linha in enumerate(lab):
         linha_str = ""
         for x, cel in enumerate(linha):
+
+            # Jogador
             if jogador and (x, y) == (jogador.x, jogador.y):
-                linha_str += "[bold green]@[/]"
+                linha_str += "🤖"
+
+            # Parede
             elif cel == "#":
-                linha_str += "[grey37]#[/]"
+                linha_str += "🟥"
+
+            # Saída
             elif cel == "S":
-                linha_str += "[bold magenta]S[/]"
+                linha_str += "🏁"
+
+            # Item coletável
             elif cel == "P":
-                linha_str += "[yellow]P[/]"
+                linha_str += "💎"
+
+            # Caminho visitado (resolver)
             elif cel == ".":
-                linha_str += "[dim].[/]"
+                linha_str += "🔹"
+
+            # Caminho vazio
             else:
-                linha_str += " "
+                linha_str += "⬛"
+
         Console.print(linha_str)
 
 def resolver_labirinto(lab: List[List[str]], inicio: Tuple[int,int], objetivo: Tuple[int,int]) -> Optional[List[Tuple[int,int]]]:

@@ -30,9 +30,11 @@ class Jogador:
             return False
 
         # coletou item?
+        # coleta item (corrigido)
         if lab[ny][nx] == "P":
             self.itens_coletados += 1
-            self.pontos += 10  # regra simples de pontuação
+            self.pontos += 10
+            lab[ny][nx] = " "   # ← remove o item do labirinto!
 
         # mover jogador
         self.x = nx
