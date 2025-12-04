@@ -4,7 +4,7 @@ Executável principal. Fornece CLI e menu interativo.
 """
 
 import argparse
-from aventura_labininto.aventura_pkg import (
+from aventura_labirinto.aventura_pkg import (
     criar_labirinto,
     imprimir_labirinto,
     resolver_labirinto,
