@@ -9,7 +9,7 @@ from .jogador import Jogador, iniciar_jogador
 from .utils import imprime_instrucoes, animacao_festa
 
 __all__ = [
-    "criar_labirinto",
+    "criar_labirinto"
     "imprimir_labirinto",
     "resolver_labirinto",
     "Jogador",
