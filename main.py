@@ -4,12 +4,13 @@ Executável principal. Fornece CLI e menu interativo.
 """
 
 import argparse
+import os
 import time
 import sys
 from rich.console import Console
 
 # importações do pacote
-from aventura_pkg import (
+from aventura_labirinto.aventura_pkg import (
     criar_labirinto,
     imprimir_labirinto,
     resolver_labirinto,
